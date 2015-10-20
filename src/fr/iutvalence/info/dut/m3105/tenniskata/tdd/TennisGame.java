@@ -19,21 +19,25 @@ public class TennisGame
 
 	public String getScore() 
 	{
+
 		if (serverPoints != receiverPoints)
 		{
 			return SCORE[serverPoints]+"-"+SCORE[receiverPoints];
+
 		}
 		return SCORE[serverPoints]+"-All";
 	}
 	
 	public void serverScore()
 	{
+
 		this.serverPoints++;
 	}
 
 	public void receiverScore() 
 	{
 		this.receiverPoints++;
+
 	}
 }
 

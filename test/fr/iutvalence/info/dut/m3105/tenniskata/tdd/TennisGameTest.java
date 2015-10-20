@@ -38,6 +38,5 @@ public class TennisGameTest
 		Assert.assertEquals(this.tennisGame.getScore(), "Forty-Fifteen");
 		this.tennisGame.serverScore();
 		Assert.assertEquals(this.tennisGame.getScore(), "Game-Fifteen");
-		
 	}
 }
