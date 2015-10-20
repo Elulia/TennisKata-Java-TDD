@@ -4,12 +4,17 @@ import org.junit.Assert;
 
 public class TennisGame
 {
-	private int score1 =0;
-	private int score2 =0;
+	private String score;
+	
+	
+	TennisGame(){
+		
+		this.score = "0-0";
+	}
 
 	public String getScore() 
 	{
-		if (score1 == 15){
+		if (score == "15-0"){
 			return "Fifteen-Love";
 		}
 		return "Love-All";
@@ -18,6 +23,6 @@ public class TennisGame
 	
 	public void serverScore()
 	{
-		this.score1 += 15;
+		this.score = "15-0";
 	}
 }
