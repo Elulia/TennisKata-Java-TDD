@@ -19,5 +19,6 @@ public class TennisGameTest
 		TennisGame tennisGame= new TennisGame();
 		tennisGame.serverScore();
 		Assert.assertEquals(tennisGame.getScore(), "Fifteen-Love");
+		
 	}
 }
