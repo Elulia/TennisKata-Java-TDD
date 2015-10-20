@@ -6,21 +6,24 @@ import org.junit.Test;
 
 public class TennisGameTest
 {
+	private TennisGame tennisGame; 
 	
-	
+	@Before
+	public void newTennisGame()
+	{
+		this.tennisGame= new TennisGame();
+	}
 	
 	@Test
 	public void whenGameHasJustStartedThenScoreShouldBe_love_all()
 	{
-		TennisGame tennisGame = new TennisGame();
-		Assert.assertEquals(tennisGame.getScore(), "Love-All");
+		Assert.assertEquals(this.tennisGame.getScore(), "Love-All");
 	}
 	
 	@Test
 	public void isServerHasScoredOnTimeAndReceiverHasNotScoredThenScoreShouldBe_Fifteen_Love()
 	{
-		TennisGame tennisGame = new TennisGame();
-		tennisGame.serverScore();
-		Assert.assertEquals(tennisGame.getScore(), "Fifteen-Love");
+		this.tennisGame.serverScore();
+		Assert.assertEquals(this.tennisGame.getScore(), "Fifteen-Love");
 	}
 }
