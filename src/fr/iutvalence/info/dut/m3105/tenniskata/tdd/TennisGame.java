@@ -17,6 +17,10 @@ public class TennisGame
 		if (score == "15-0"){
 			return "Fifteen-Love";
 		}
+		
+		if (score == "0-15"){
+			return "Love-Fifteen";
+		}
 		return "Love-All";
 	}
 
@@ -24,5 +28,10 @@ public class TennisGame
 	public void serverScore()
 	{
 		this.score = "15-0";
+	}
+	
+	public void noneServerScore()
+	{
+		this.score = "0-15";
 	}
 }
