@@ -21,5 +21,9 @@ public class TennisGame
 	{
 		this.score = "Fifteen-Love";
 	}
+
+	public void receiverScore() {
+		this.score = "Love-Fifteen";
+	}
 }
 
