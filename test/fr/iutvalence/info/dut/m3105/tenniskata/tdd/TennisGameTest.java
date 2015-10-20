@@ -15,22 +15,29 @@ public class TennisGameTest
 	}
 	
 	@Test
-	public void whenGameHasJustStartedThenScoreShouldBe_love_all()
+	public void testDeLenferSuperLongQuiCouvrePresqueTousLesCas()
 	{
 		Assert.assertEquals(this.tennisGame.getScore(), "Love-All");
-	}
-	
-	@Test
-	public void isServerHasScoredOnTimeAndReceiverHasNotScoredThenScoreShouldBe_Fifteen_Love()
-	{
 		this.tennisGame.serverScore();
 		Assert.assertEquals(this.tennisGame.getScore(), "Fifteen-Love");
-	}
-	
-	@Test
-	public void isReceiverHasScoredOnTimeAndServerHasNotScoredThenScoreShouldBe_Love_Fifteen()
-	{
+		this.tennisGame.receiverScore();
+		Assert.assertEquals(this.tennisGame.getScore(), "Fifteen-All");
+		this.tennisGame.receiverScore();
+		Assert.assertEquals(this.tennisGame.getScore(), "Fifteen-Thirty");
+		this.tennisGame.receiverScore();
+		Assert.assertEquals(this.tennisGame.getScore(), "Fifteen-Forty");
+		this.tennisGame.receiverScore();
+		Assert.assertEquals(this.tennisGame.getScore(), "Fifteen-Game");
+		this.tennisGame = new TennisGame();
 		this.tennisGame.receiverScore();
 		Assert.assertEquals(this.tennisGame.getScore(), "Love-Fifteen");
+		this.tennisGame.serverScore();
+		this.tennisGame.serverScore();
+		Assert.assertEquals(this.tennisGame.getScore(), "Thirty-Fifteen");
+		this.tennisGame.serverScore();
+		Assert.assertEquals(this.tennisGame.getScore(), "Forty-Fifteen");
+		this.tennisGame.serverScore();
+		Assert.assertEquals(this.tennisGame.getScore(), "Game-Fifteen");
+		
 	}
 }
