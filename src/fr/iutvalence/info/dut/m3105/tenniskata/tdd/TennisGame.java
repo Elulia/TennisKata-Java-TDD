@@ -1,29 +1,39 @@
 package fr.iutvalence.info.dut.m3105.tenniskata.tdd;
 
+import java.lang.reflect.Array;
+
 import org.junit.Assert;
 
 public class TennisGame
 {
-	private String score;
+	private int serverPoints;
+	private int receiverPoints;
 	
+	private static final String[] SCORE = { "Love" , "Fifteen" , "Thirty" , "Forty" , "Game" };	
 	
 	public TennisGame()
 	{	
-		this.score = "Love-All";
+		this.serverPoints = 0;
+		this.receiverPoints = 0;
 	}
 
 	public String getScore() 
 	{
-		return this.score;
+		if (serverPoints != receiverPoints)
+		{
+			return SCORE[serverPoints]+"-"+SCORE[receiverPoints];
+		}
+		return SCORE[serverPoints]+"-All";
 	}
 	
 	public void serverScore()
 	{
-		this.score = "Fifteen-Love";
+		this.serverPoints++;
 	}
 
-	public void receiverScore() {
-		this.score = "Love-Fifteen";
+	public void receiverScore() 
+	{
+		this.receiverPoints++;
 	}
 }
 
