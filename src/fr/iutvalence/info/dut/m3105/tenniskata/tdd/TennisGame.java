@@ -7,14 +7,9 @@ public class TennisGame
 	
 	
 
-	public static String getScore(int score1, int score2) 
+	public static String getScore() 
 	{
-		if (score1 == 0 && score2 == 0)
-		{
 			return "Love-All";
-		}
-		
-		return null;
 	}
 	
 }
