@@ -9,7 +9,9 @@ public class TennisGameTest
 	@Test
 	public void aSimpleBeginningTest()
 	{
-		Assert.fail("...");
-	}
+		Assert.assertEquals(TennisGame.getScore(0,0), "Love-All");
+		
 
+
+	}
 }
